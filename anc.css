@@ -1,0 +1,1084 @@
+/* Pregnancy Stages Specific Styles */
+
+/* Hero Image Section */
+.imageContainer {
+    position: relative;
+    background-image: url('../images/pregnancy-stages-hero.jpg');
+    height: 92.3vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: zoomIn 5s ease-in-out forwards;
+}
+
+.imageContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* SVG Wave */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(5px -5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.heroText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.heroText h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.heroText p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.6;
+    animation: fadeInUp 2s ease-out forwards;
+    margin-left: 9rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Style for progress overview section */
+.progress-overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Container styling */
+.progress-container {
+    width: 80%;
+    max-width: 900px;
+}
+
+/* Flexbox layout for stats */
+.progress-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid pink;
+    padding: 1rem;
+    border-radius: 15px;
+    background: #fff5f8; /* Light pink background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for each stat card */
+.stat-card {
+    text-align: center;
+    padding: 1rem;
+    width: 30%;
+    border-radius: 10px;
+    background: #ffe0eb; /* Soft pink */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: #ffb6c1;
+}
+
+/* Icons */
+.stat-card i {
+    font-size: 2rem;
+    color: #ff4d6d;
+    margin-bottom: 10px;
+}
+
+/* Headings */
+.stat-card h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Paragraph */
+.stat-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Span text */
+.stat-card span {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* ANC Tracker Styles */
+.anc-tracker {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.anc-tracker h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.anc-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.visit-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.visit-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(231, 0, 138, 0.1);
+}
+
+.visit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(231, 0, 138, 0.1);
+}
+
+.visit-header {
+    background: #e7008a;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.visit-header.completed {
+    background: #28a745;
+}
+
+.visit-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.week-tag {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.visit-header i {
+    font-size: 1.5rem;
+}
+
+.visit-content {
+    padding: 1.5rem;
+}
+
+.visit-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.visit-content ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.visit-content ul li::before {
+    content: "•";
+    color: #e7008a;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+.reminder-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: transparent;
+    border: 2px solid #e7008a;
+    color: #e7008a;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.reminder-btn:hover {
+    background: #e7008a;
+    color: white;
+}
+
+/* Trimester Container */
+.trimester-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Trimester Sections */
+.trimester-section {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.trimester-section:hover {
+    transform: translateY(-5px);
+}
+
+.trimester-header {
+    background: #e7008a;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.trimester-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(135deg, transparent 33.33%, #e7008a 33.33%, #e7008a 66.66%, transparent 66.66%);
+    background-size: 20px 20px;
+}
+
+.trimester-header h2 {
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.trimester-weeks {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0;
+    opacity: 0.9;
+}
+
+.trimester-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Development Boxes */
+.development-box {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(231, 0, 138, 0.1);
+}
+
+.development-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(231, 0, 138, 0.1);
+    border-color: #e7008a;
+}
+
+.development-box h3 {
+    color: #e7008a;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.development-box h3 i {
+    font-size: 1.5rem;
+}
+
+.development-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.development-box ul li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.development-box ul li::before {
+    content: "•";
+    color: #e7008a;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+/* Resources Sidebar */
+.resources-sidebar {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.resources-sidebar h3 {
+    color: #e7008a;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.resources-sidebar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.resources-sidebar ul li a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #f8f9fa;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    color: #333;
+    font-weight: 500;
+    border: 1px solid rgba(231, 0, 138, 0.2);
+}
+
+.resources-sidebar ul li a:hover {
+    background: #e7008a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(231, 0, 138, 0.2);
+}
+
+/* Call to Action Section */
+.cta-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    margin-top: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-section h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.cta-section p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cta-btn {
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    min-width: 200px;
+}
+
+.cta-btn.primary {
+    background: #e7008a;
+    color: white;
+    border: none;
+}
+
+.cta-btn.secondary {
+    background: white;
+    color: #e7008a;
+    border: 2px solid #e7008a;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-btn.primary:hover {
+    background: #c40070;
+}
+
+.cta-btn.secondary:hover {
+    background: rgba(231, 0, 138, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .trimester-container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroText h1 {
+        font-size: 2.5rem;
+    }
+
+    .heroText p {
+        font-size: 1.2rem;
+        margin: 0 1rem;
+    }
+
+    .trimester-content {
+        grid-template-columns: 1fr;
+    }
+
+    .resources-sidebar ul {
+        flex-direction: column;
+    }
+
+    .resources-sidebar ul li a {
+        display: block;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-btn {
+        width: 100%;
+    }
+
+    .trimester-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .visit-timeline {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroText h1 {
+        font-size: 2rem;
+    }
+
+    .imageContainer {
+        height: 50vh;
+    }
+
+    .development-box {
+        padding: 1rem;
+    }
+
+    .trimester-content {
+        padding: 1rem;
+    }
+
+    .anc-tracker {
+        padding: 1rem;
+    }
+
+    .visit-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .imageContainer {
+        height: auto;
+        background: none;
+    }
+
+    .heroText {
+        position: static;
+        transform: none;
+        color: #000;
+    }
+
+    .wave,
+    .cta-section,
+    .resources-sidebar {
+        display: none;
+    }
+
+    .trimester-section {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    .anc-tracker {
+        break-inside: avoid;
+    }
+}
+
+/* Button Base Styles */
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    outline: none;
+}
+
+/* Reminder Button Styles */
+.reminder-btn {
+    background-color: #f8f9fa;
+    color: #e7008a;
+    border: 2px solid #e7008a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.reminder-btn i {
+    font-size: 1rem;
+}
+
+/* Button States - Hover */
+.reminder-btn:hover {
+    background-color: #e7008a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(231, 0, 138, 0.2);
+}
+
+/* Button States - Active (clicked) */
+.reminder-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(231, 0, 138, 0.2);
+    background-color: #c40070;
+}
+
+/* Button States - Focus */
+.reminder-btn:focus {
+    outline: 2px solid #e7008a;
+    outline-offset: 2px;
+}
+
+/* Button States - Disabled */
+.reminder-btn:disabled {
+    background-color: #e0e0e0;
+    color: #9e9e9e;
+    border-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+/* Schedule Button Styles */
+.schedule-btn {
+    background-color: #e7008a;
+    color: white;
+}
+
+.schedule-btn:hover {
+    background-color: #c40070;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(231, 0, 138, 0.2);
+}
+
+.schedule-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(231, 0, 138, 0.2);
+}
+
+/* Reschedule Button Styles */
+.reschedule-btn {
+    background-color: #ff9800;
+    color: white;
+}
+
+.reschedule-btn:hover {
+    background-color: #f57c00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 152, 0, 0.2);
+}
+
+.reschedule-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(255, 152, 0, 0.2);
+}
+
+/* View Details Button Styles */
+.view-details-btn {
+    background-color: #2196f3;
+    color: white;
+}
+
+.view-details-btn:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
+}
+
+.view-details-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(33, 150, 243, 0.2);
+}
+
+/* CTA Button Styles */
+.cta-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    min-width: 200px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cta-btn.primary {
+    background-color: #e7008a;
+    color: white;
+}
+
+.cta-btn.primary:hover {
+    background-color: #c40070;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 0, 138, 0.3);
+}
+
+.cta-btn.primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(231, 0, 138, 0.3);
+}
+
+.cta-btn.secondary {
+    background-color: transparent;
+    color: #e7008a;
+    border: 2px solid #e7008a;
+}
+
+.cta-btn.secondary:hover {
+    background-color: rgba(231, 0, 138, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 0, 138, 0.1);
+}
+
+.cta-btn.secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(231, 0, 138, 0.1);
+}
+
+/* Modal Button Styles */
+.modal-buttons button {
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+}
+
+.modal-buttons button.primary {
+    background-color: #e7008a;
+    color: white;
+}
+
+.modal-buttons button.primary:hover {
+    background-color: #c40070;
+}
+
+.modal-buttons button.secondary {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.modal-buttons button.secondary:hover {
+    background-color: #e9ecef;
+}
+
+/* Add Reading Button Styles */
+.add-reading-btn {
+    background-color: #4caf50;
+    color: white;
+    margin-top: 1rem;
+}
+
+.add-reading-btn:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+}
+
+.add-reading-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+}
+
+/* Button Group Styles (for multiple buttons together) */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.action-buttons button {
+    flex: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    button, .reminder-btn, .schedule-btn, .reschedule-btn, .view-details-btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .cta-btn {
+        min-width: 150px;
+        padding: 0.85rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Animation for Button Clicks */
+@keyframes buttonClick {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+button:active {
+    animation: buttonClick 0.2s ease;
+}
+
+/* Loading State for Buttons */
+button.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+button.loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-container {
+    transform: translateY(0);
+}
+
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #e7008a;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    padding: 0 0.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.modal-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.cancel-btn:hover {
+    background-color: #e9ecef;
+}
+
+.confirm-btn {
+    background-color: #e7008a;
+    color: white;
+    border: none;
+}
+
+.confirm-btn:hover {
+    background-color: #c40070;
+}
+
+/* Form Styles in Modal */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .modal-container {
+        width: 95%;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+    
+    .modal-btn {
+        width: 100%;
+    }
+}
+
+
+/* Mobile Menu Styles */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu-open {
+    overflow: hidden;
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    margin: 0;
+}
+
+/* Notification Animation */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e7008a;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification.fade-out {
+    animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-50%) translateY(20px); opacity: 0; }
+    to { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Form Enhancements */
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #e7008a;
+    box-shadow: 0 0 0 2px rgba(231, 0, 138, 0.1);
+    outline: none;
+}
+
