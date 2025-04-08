@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MommyTrack - Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <div class="image-section">
+        <img src="pregnant1.jpg" alt="Expectant mother resting">
+      </div>
+        </div>
+    <div>
+    <div class="form-section">
+      <div class="logo">❤️</div>
+      <h1 class="brand">MommyTrack</h1>
+      <p>Your personal pregnancy companion</p>
+
+      <h2>Create Your Account</h2>
+      <p>Step 1 of 3: Account Details <span id="progress-text">33%</span></p>
+      <progress id="progress-bar" value="33" max="100"></progress>
+
+      <form id="signup-form">
+        <div class="input-box">
+          <input type="text" id="fullname" placeholder="Full Name" required>
+          <span class="icon">👤</span>
+        </div>
+
+        <div class="input-box">
+          <input type="email" id="email" placeholder="Email Address" required>
+          <span class="icon">📧</span>
+        </div>
+
+        <div class="input-box">
+          <input type="password" id="password" placeholder="Create Password" required>
+          <span class="icon" onclick="togglePassword('password')">👁️</span>
+        </div>
+        <small>Use 8+ characters with a mix of letters, numbers & symbols</small>
+
+        <div class="input-box">
+          <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+          <span class="icon" onclick="togglePassword('confirm-password')">👁️</span>
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" id="agree" required>
+          <label for="agree">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+        </div>
+
+        <button type="submit" class="btn"><a href="signup2.html">Continue ➤</a></button>
+        <p>Already have an account? <a href="login.html">Sign in</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Toggle password visibility
+    function togglePassword(id) {
+      const input = document.getElementById(id);
+      input.type = input.type === 'password' ? 'text' : 'password';
+    }
+
+    // Password match validation
+    document.getElementById("signup-form").addEventListener("submit", function (e) {
+      const pass1 = document.getElementById("password").value;
+      const pass2 = document.getElementById("confirm-password").value;
+
+      if (pass1 !== pass2) {
+        e.preventDefault();
+        alert("Passwords do not match!");
+      }
+    });
+  </script>
+</body>
+
+</html>

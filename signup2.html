@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account - Step 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <div style="width:100%; height:100%; background:#efa7c6;"></div>
+      <img src="pregnant1.jpg" alt="Expectant mother resting">
+    </div>
+
+    <div class="right-panel">
+      <h1>Create Your Account</h1>
+      <p>Step 2 of 3: Pregnancy Details <span style="float:right;">67%</span></p>
+      <hr />
+
+      <form class="form" action="dashboard.html">
+        <div class="input-box">
+          <input type="date" required>
+          <span class="icon">📅</span>
+        </div>
+        <small>This helps us personalize your experience</small>
+
+        <p>Pregnancy Status</p>
+        <div class="social-buttons">
+          <label><input type="radio" name="status" required> First pregnancy</label>
+          <label><input type="radio" name="status"> Experienced</label>
+        </div>
+
+        <p>Current Week of Pregnancy</p>
+        <div class="input-box">
+          <select required>
+            <option value="">Select your current week</option>
+            <option>Week 1</option>
+            <option>Week 2</option>
+            <option>Week 3</option>
+            <!-- Add more weeks -->
+          </select>
+        </div>
+
+        <p>Any health concerns? (Optional)</p>
+        <div class="social-buttons">
+          <label><input type="checkbox"> Nausea</label>
+          <label><input type="checkbox"> Fatigue</label>
+        </div>
+        <div class="social-buttons">
+          <label><input type="checkbox"> Back Pain</label>
+          <label><input type="checkbox"> Insomnia</label>
+        </div>
+
+        <div class="social-buttons">
+          <a href="signup1.html" class="social">⬅ Back</a>
+          <button type="submit" class="social"><a href="navigation.html">Continue ➤</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

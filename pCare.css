@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif; /* Set the font for the body */
+    background-color: #f4f4f4; /* Light gray background color */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding around the body */
+}
+
+.container {
+    max-width: 600px; /* Set a maximum width for the container */
+    margin: auto; /* Center the container */
+    background: white; /* White background for the content */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h1 {
+    text-align: center; /* Center the main heading */
+}
+
+h2 {
+    color: #e7008a; /* Custom color for subheadings */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+button {
+    display: block; /* Make the button a block element */
+    width: 100%; /* Full width for the button */
+    padding: 10px; /* Padding inside the button */
+    background-color: #e7008a; /* Custom pink background for the button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above the button */
+}
+
+button:hover {
+    background-color: #d6007a; /* Darker pink on hover */
+}
+
+.hidden {
+    display: none; /* Hide elements with this class */
+}
+
+#info {
+    margin-top: 20px; /* Space above the info section */
+    color: #333; /* Dark text color for readability
